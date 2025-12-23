@@ -117,7 +117,7 @@ h2 {
 }
 @keyframes moveStripe { 0% { background-position: 0 0; } 100% { background-position: 28px 0; } }
 
-/* --- الخطوات --- */
+/* --- الخطوات (تم التعديل هنا لتوحيد الحجم) --- */
 .step {
   display: flex;
   align-items: center;
@@ -125,7 +125,12 @@ h2 {
   background: linear-gradient(145deg, #660000, #3d0000);
   border: 2px solid #c0a062;
   border-radius: 18px;
-  padding: 18px 20px;
+  
+  /* التعديلات لضبط الحجم */
+  padding: 15px;       
+  min-height: 80px;    /* ارتفاع ثابت للزرين */
+  font-size: 16px;     /* تصغير الخط قليلاً */
+  
   margin: 15px auto;
   width: 100%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
@@ -133,7 +138,6 @@ h2 {
   pointer-events: none;
   transform: translateY(15px);
   transition: all 0.4s ease;
-  font-size: 17px;
   position: relative;
   overflow: hidden;
 }
@@ -262,7 +266,7 @@ a:hover { color: #ffd700; }
 
     <div id="step1" class="step active">
       <a href="#" onclick="completeStep(1, 'https://www.youtube.com/@MRGAMESFFV2'); return false;">
-        <span>📺🔔 اضغط هنا وقم بالاشتراك في القناة وتفعيل الجرس</span>
+        <span>📺🔔 اضغط هنا وقم بالاشتراك في القناة وتفعيل زر الجرس</span>
         <span id="check1" class="check">➡️</span>
       </a>
     </div>
